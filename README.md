@@ -1,3 +1,12 @@
+# React Weather App
+
+The React Weather App utilizes the [OpenWeatherMap Weather API](https://openweathermap.org/api) to gather and report weather information for any destination on the globe. The app works by fetching information from the [API](https://openweathermap.org/api) on the city or cities the user types in. The coordinates are then used to request weather information from the [API](https://openweathermap.org/api) which is then dynamically displayed to the user.
+
+The app shows a variety of static and animated weather scenarios based on the current real-time weather for the searched city.
+
+The app has been developed with responsive design in mind -- whether being displayed on a large screen or a mobile device.
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
