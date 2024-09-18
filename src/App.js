@@ -12,7 +12,7 @@ function App() {
   const url_weather2 = '&lon=';
   const url_weather3 = '&appid=b6d014499a7c240caa76776d1b27da83';
 
-  const url_geocode1 = 'http://api.openweathermap.org/geo/1.0/direct?q=';
+  const url_geocode1 = 'https://api.openweathermap.org/geo/1.0/direct?q=';
   const url_geocode2 = '&limit=5&appid=b6d014499a7c240caa76776d1b27da83';
 
   const [ cityData, setCityData ] = useState([]);
