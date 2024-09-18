@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef, createContext, useCallback } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect, createContext } from 'react';
 
 
 import SelectCity from './components/SelectCity';
@@ -55,12 +54,9 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(showMultipleCityModal);
-    console.log(hasRun);
     if (!showMultipleCityModal && hasRun) {
       if (cityData) {
         if (cityData.length > 0) {
-          console.log(cityData);
           fetchWeatherInfo();
         }
       }
@@ -124,7 +120,6 @@ function App() {
   function getTimeZoneTime(time_utc, time_shift) {
     let time = parseInt(time_utc);
     let shift = parseInt(time_shift);
-    console.log(time_shift);
     return time + shift + 14400;
   }
 
@@ -150,14 +145,11 @@ function App() {
       element.classList.remove(...element.classList);
       let hour = 0;
       if (weatherData) {
-        console.log(weatherData);
         let time = weatherData.date_time;
         let time_shift = weatherData.timezone;
         // Todo -- add functionality for determining morning, afternoon, night, etc.
         hour = getTime(time, time_shift);
       }
-
-      console.log("Hour is " + hour);
 
       if (currentWeather.toUpperCase().indexOf("CLOUD") !== -1) {
         element.classList.add('cloud');

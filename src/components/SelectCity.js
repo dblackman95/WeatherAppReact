@@ -1,4 +1,4 @@
-import React, { useContext, useState, useCallback } from "react";
+import React, { useContext, useState } from "react";
 import { CityContext } from "../App";
 
 function SelectCity({ fetchWeatherInfo }) {
@@ -8,7 +8,6 @@ function SelectCity({ fetchWeatherInfo }) {
     const [ cityButtonName, setCityButtonName ] = useState("Select City");
     const [ selectedCity, setSelectedCity ] = useState(null);
 
-    console.log(cityData);
 
 
     function changeButtonLabel(city_name, city_state, city_country, city){
